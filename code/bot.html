@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REQUEST DESAIN MEDFO by ADsolution</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="contact" action="" onsubmit="sendwa(event)">
+            <img src="./asset/MEDFO.png" alt="Form Image" class="form-image">
+            <h3>REQUEST DESAIN MEDFO</h3>
+            <fieldset>
+                <input placeholder="Nama Kegiatan" type="text" id="namaKegiatan" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Tema Kegiatan" type="text" id="temaKegiatan" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="PJ/NRP" type="text" id="pjNrp" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="KP/NRP" type="text" id="kpNrp" required>
+            </fieldset>
+            <fieldset>
+                <textarea placeholder="Tujuan Kegiatan" id="tujuanKegiatan" required></textarea>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Tanggal dan Waktu Publikasi" type="text" id="tanggalPublikasi" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Contact Person" type="text" id="contactPerson" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Dipublikasi di?" type="text" id="dipublikasiDi" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Jenis Desain" type="text" id="jenisDesain" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Caption (Optional)" type="text" id="caption" required>
+            </fieldset>,
+            <fieldset>
+                <textarea placeholder="Catatan (Dapat berupa link referensi desain)" id="catatan" required></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        function sendwa(event) {
+            event.preventDefault();
+            
+            const namaKegiatan = document.getElementById('namaKegiatan').value;
+            const temaKegiatan = document.getElementById('temaKegiatan').value;
+            const pjNrp = document.getElementById('pjNrp').value;
+            const kpNrp = document.getElementById('kpNrp').value;
+            const tujuanKegiatan = document.getElementById('tujuanKegiatan').value;
+            const tanggalPublikasi = document.getElementById('tanggalPublikasi').value;
+            const contactPerson = document.getElementById('contactPerson').value;
+            const dipublikasiDi = document.getElementById('dipublikasiDi').value;
+            const jenisDesain = document.getElementById('jenisDesain').value;
+            const caption = document.getElementById('caption').value;
+            const catatan = document.getElementById('catatan').value;
+
+            const message = `
+                REQUEST DESAIN :
+                Nama Kegiatan: ${namaKegiatan}
+                Tema Kegiatan: ${temaKegiatan}
+                PJ/NRP: ${pjNrp}
+                KP/NRP: ${kpNrp}
+                Tujuan Kegiatan: ${tujuanKegiatan}
+                Tanggal dan Waktu Publikasi: ${tanggalPublikasi}
+                Contact Person: ${contactPerson}
+                Dipublikasi di: ${dipublikasiDi}
+                Jenis Desain: ${jenisDesain}
+                Caption: ${caption}
+                Catatan: ${catatan}
+            `;
+            const urlTowhatsapp = `https://wa.me/6281806067144?text=${encodeURIComponent(message)}`;
+            window.open(urlTowhatsapp, "_blank");
+        }
+    </script>
+</body>
+</html>
