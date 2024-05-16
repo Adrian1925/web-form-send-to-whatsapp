@@ -7,9 +7,53 @@
 }
 
 body {
-    background: #5888f0;
-    color: #333;
-    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-image: url('./images/bg-01.jpg');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background image fixed during scroll */
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 .form-image {
@@ -19,7 +63,7 @@ body {
     display: block;
 }
 
-.container {
+/* .container {
     max-width: 400px;
     width: 100%;
     margin: 50px auto;
@@ -27,6 +71,15 @@ body {
     padding: 25px 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* 80% opacity white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 form h3 {
