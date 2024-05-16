@@ -42,8 +42,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('images/bg-01.jpg');
-  opacity: 0.9;
+
 }
 .container-login100.login100-form-btn {
   opacity: 1; 
