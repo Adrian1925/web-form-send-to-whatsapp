@@ -76,19 +76,19 @@
             const catatan = document.getElementById('catatan').value;
 
             const message = `
-                REQUEST DESAIN :
-                Nama Kegiatan: ${namaKegiatan}
-                Nama Kegiatan: ${file}
-                Tema Kegiatan: ${temaKegiatan}
-                PJ/NRP: ${pjNrp}
-                KP/NRP: ${kpNrp}
-                Tujuan Kegiatan: ${tujuanKegiatan}
-                Tanggal dan Waktu Publikasi: ${tanggalPublikasi}
-                Contact Person: ${contactPerson}
-                Dipublikasi di: ${dipublikasiDi}
-                Jenis Desain: ${jenisDesain}
-                Caption: ${caption}
-                Catatan: ${catatan}
+            REQUEST DESAIN :
+            Nama Kegiatan          : ${namaKegiatan}
+            Nama Kegiatan          : ${file}
+            Tema Kegiatan          : ${temaKegiatan}
+            PJ/NRP                 : ${pjNrp}
+            KP/NRP                 : ${kpNrp}
+            Tujuan Kegiatan        : ${tujuanKegiatan}
+            Tanggal/Waktu Publikasi: ${tanggalPublikasi}
+            Contact Person         : ${contactPerson}
+            Dipublikasi di         : ${dipublikasiDi}
+            Jenis Desain           : ${jenisDesain}
+            Caption                : ${caption}
+            Catatan                : ${catatan}    
             `;
             const urlTowhatsapp = `https://wa.me/6281806067144?text=${encodeURIComponent(message)}`;
             window.open(urlTowhatsapp, "_blank");
