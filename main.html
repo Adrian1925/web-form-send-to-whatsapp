@@ -58,7 +58,7 @@
         </form>
     </div>
     <script>
-        function sendwa(event) {
+       function sendwa(event) {
             event.preventDefault();
 
             const namaKegiatan = document.getElementById('namaKegiatan').value;
@@ -74,19 +74,20 @@
             const catatan = document.getElementById('catatan').value;
 
             const message = `
-            REQUEST DESAIN :
-                Nama Kegiatan          : ${namaKegiatan}
-                Nama Kegiatan          : ${file}
-                Tema Kegiatan          : ${temaKegiatan}
-                PJ/NRP                 : ${pjNrp}
-                KP/NRP                 : ${kpNrp}
-                Tujuan Kegiatan        : ${tujuanKegiatan}
+            Anda Berhasil Menghubungi Medfo
+            Desain dengan SOP :
+                Nama Kegiatan: ${namaKegiatan}
+                Tema Kegiatan: ${temaKegiatan}
+                PJ/NRP: ${pjNrp}
+                KP/NRP: ${kpNrp}
+                Tujuan Kegiatan: ${tujuanKegiatan}
                 Tanggal/Waktu Publikasi: ${tanggalPublikasi}
-                Contact Person         : ${contactPerson}
-                Dipublikasi di         : ${dipublikasiDi}
-                Jenis Desain           : ${jenisDesain}
-                Caption                : ${caption}
-                Catatan                : ${catatan}    
+                Contact Person: ${contactPerson}
+                Dipublikasi di: ${dipublikasiDi}
+                Jenis Desain: ${jenisDesain}
+                Caption: ${caption}
+                Catatan: ${catatan}   
+            Dalam proses pembuatan, Terimakasih
             `;
             const urlTowhatsapp = `https://wa.me/6281806067144?text=${encodeURIComponent(message)}`;
             window.open(urlTowhatsapp, "_blank");
