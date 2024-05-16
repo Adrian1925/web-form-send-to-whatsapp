@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REQUEST DESAIN MEDFO by ADsolution</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <form id="contact" action="" onsubmit="sendwa(event)">
@@ -46,9 +48,6 @@
                         <input placeholder="Dipublikasi di?" type="text" id="dipublikasiDi" required>
                     </fieldset>
                 </div>
-                <!-- <fieldset>
-                    <input placeholder="File" type="file" id="file" required autofocus>
-                </fieldset> -->
             </div>
             <fieldset>
                 <input placeholder="Caption (Optional)" type="text" id="caption" required>
@@ -61,9 +60,8 @@
     <script>
         function sendwa(event) {
             event.preventDefault();
-            
+
             const namaKegiatan = document.getElementById('namaKegiatan').value;
-            const file = document.getElementById('file').value;
             const temaKegiatan = document.getElementById('temaKegiatan').value;
             const pjNrp = document.getElementById('pjNrp').value;
             const kpNrp = document.getElementById('kpNrp').value;
@@ -77,22 +75,23 @@
 
             const message = `
             REQUEST DESAIN :
-            Nama Kegiatan          : ${namaKegiatan}
-            Nama Kegiatan          : ${file}
-            Tema Kegiatan          : ${temaKegiatan}
-            PJ/NRP                 : ${pjNrp}
-            KP/NRP                 : ${kpNrp}
-            Tujuan Kegiatan        : ${tujuanKegiatan}
-            Tanggal/Waktu Publikasi: ${tanggalPublikasi}
-            Contact Person         : ${contactPerson}
-            Dipublikasi di         : ${dipublikasiDi}
-            Jenis Desain           : ${jenisDesain}
-            Caption                : ${caption}
-            Catatan                : ${catatan}    
+                Nama Kegiatan          : ${namaKegiatan}
+                Nama Kegiatan          : ${file}
+                Tema Kegiatan          : ${temaKegiatan}
+                PJ/NRP                 : ${pjNrp}
+                KP/NRP                 : ${kpNrp}
+                Tujuan Kegiatan        : ${tujuanKegiatan}
+                Tanggal/Waktu Publikasi: ${tanggalPublikasi}
+                Contact Person         : ${contactPerson}
+                Dipublikasi di         : ${dipublikasiDi}
+                Jenis Desain           : ${jenisDesain}
+                Caption                : ${caption}
+                Catatan                : ${catatan}    
             `;
             const urlTowhatsapp = `https://wa.me/6281806067144?text=${encodeURIComponent(message)}`;
             window.open(urlTowhatsapp, "_blank");
         }
     </script>
 </body>
+
 </html>
