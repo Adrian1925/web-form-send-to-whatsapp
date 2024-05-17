@@ -21,7 +21,7 @@
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 body {
-  background-image: url('./images/bg-01.jpg');
+  background-image: url('./images/1.JPG');
     background-size: cover; /* Ensure the image covers the entire background */
     background-repeat: no-repeat;
     background-attachment: fixed; /* Keep the background image fixed during scroll */
