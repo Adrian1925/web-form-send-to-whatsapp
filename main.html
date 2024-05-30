@@ -74,21 +74,29 @@
             const catatan = document.getElementById('catatan').value;
 
             const message = `
-            Anda Berhasil Menghubungi Medfo
-            Desain dengan SOP :
-                Nama Kegiatan: ${namaKegiatan}
-                Tema Kegiatan: ${temaKegiatan}
-                PJ/NRP: ${pjNrp}
-                KP/NRP: ${kpNrp}
-                Tujuan Kegiatan: ${tujuanKegiatan}
-                Tanggal/Waktu Publikasi: ${tanggalPublikasi}
-                Contact Person: ${contactPerson}
-                Dipublikasi di: ${dipublikasiDi}
-                Jenis Desain: ${jenisDesain}
-                Caption: ${caption}
-                Catatan: ${catatan}   
-            Dalam proses pembuatan, Terimakasih
-            `;
+  Anda Berhasil Menghubungi Medfo
+
+  *Desain dengan SOP:*
+
+  - Nama Kegiatan: ${namaKegiatan}
+  - Tema Kegiatan: ${temaKegiatan}
+  - PJ/NRP: ${pjNrp}
+  - KP/NRP: ${kpNrp}
+  - Tujuan Kegiatan: ${tujuanKegiatan}
+  - Tanggal/Waktu Publikasi: ${tanggalPublikasi}
+  - Contact Person: ${contactPerson}
+  - Dipublikasi di: ${dipublikasiDi}
+  - Jenis Desain: ${jenisDesain}
+  - Caption: ${caption}
+  - Catatan: ${catatan}
+
+  *Status:*
+
+  Dalam proses pembuatan
+
+  *Terimakasih*
+`;
+
             const urlTowhatsapp = `https://wa.me/6281806067144?text=${encodeURIComponent(message)}`;
             window.open(urlTowhatsapp, "_blank");
         }
