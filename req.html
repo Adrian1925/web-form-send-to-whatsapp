@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REQUEST DESAIN MEDFO by ADS</title>
     <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
     <div class="container">
         <form id="contact" action="" onsubmit="sendwa(event)">
             <img src="./asset/MEDFO.png" alt="Form Image" class="form-image">
             <h3>KONSUL DESAIN MEDFO</h3>
-                <fieldset>
-                    <input placeholder="Nama Kegiatan" type="text" id="namaKegiatan" required autofocus>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Tema Kegiatan" type="text" id="temaKegiatan" required>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Tujuan Kegiatan" id="tujuanKegiatan" required>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Link Drive Desain ( ' - ' Jika Desain Dikirim langsung via wa) " id="desain" required>
-                </fieldset>
-                <fieldset>
-                    <button name="submit" type="submit" id="contact-submit">Kirim Request</button>
-                </fieldset>
+            <fieldset>
+                <input placeholder="Nama Kegiatan" type="text" id="namaKegiatan" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Tema Kegiatan" type="text" id="temaKegiatan" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Tujuan Kegiatan" id="tujuanKegiatan" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Link Drive Desain ( ' - ' Jika Desain Dikirim langsung via wa) " id="desain"
+                    required>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit">Kirim Request</button>
+            </fieldset>
         </form>
     </div>
-    <script>
-        function sendwa(event) {
-            event.preventDefault();
-            
-            const namaKegiatan = document.getElementById('namaKegiatan').value;
-            const temaKegiatan = document.getElementById('temaKegiatan').value;
-            const tujuanKegiatan = document.getElementById('tujuanKegiatan').value;
-            const desain = document.getElementById('desain').value;
-
-            const message =`
-            KONSULTASI DESAIN :
-                Nama Kegiatan: ${namaKegiatan}
-                Tema Kegiatan: ${temaKegiatan}
-                Tujuan Kegiatan: ${tujuanKegiatan}
-                Link Desain: ${desain}
-            `;
-            const urlTowhatsapp = `https://wa.me/6281806067144?text=${encodeURIComponent(message)}`;
-            window.open(urlTowhatsapp, "_blank");
-        }
-    </script>
+    <script src="./js/konsuladrian.js"></script>
 </body>
+
 </html>
