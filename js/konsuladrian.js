@@ -22,6 +22,6 @@ Dalam proses
 
 *Terimakasih*
     `;
-    const urlTowhatsapp = `https://wa.me/6281806067144?text=${encodeURIComponent(message)}`;
+    const urlTowhatsapp = `https://wa.me/6285707358765?text=${encodeURIComponent(message)}`;
     window.open(urlTowhatsapp, "_blank");
 }
